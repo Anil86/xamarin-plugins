@@ -22,7 +22,15 @@ namespace DeviceMotion.Plugin.Abstractions
         /// <summary>
         /// Compass Sensor
         /// </summary>
-        Compass
-	}
+        Compass,
+        /// <summary>
+        /// Step detector Sensor
+        /// </summary>
+        StepDetector,
+        /// <summary>
+        /// Step counter Sensor
+        /// </summary>
+        StepCounter
+    }
 }
 
