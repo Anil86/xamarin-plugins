@@ -56,6 +56,12 @@ namespace DeviceMotion.Plugin.Abstractions
 		/// <value>The type of the value.</value>
 		public MotionSensorValueType ValueType { get; set; }
 
+        /// <summary>
+        /// Gets or sets the time when the sensor's value changed.
+        /// </summary>
+        /// <value>The timestamp.</value>
+        public long Timestamp { get; set; }
+
     }
 
     /// <summary>

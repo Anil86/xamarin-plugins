@@ -78,33 +78,29 @@ namespace DeviceMotion.Plugin
             switch (e.Sensor.Type)
             {
                 case SensorType.Accelerometer:
-                    SensorValueChanged(this, new SensorValueChangedEventArgs() { ValueType = MotionSensorValueType.Vector, SensorType = MotionSensorType.Accelerometer, Value = new MotionVector() { X = e.Values[0], Y = e.Values[1], Z = e.Values[2] } });
+                    SensorValueChanged(this, new SensorValueChangedEventArgs() { ValueType = MotionSensorValueType.Vector, SensorType = MotionSensorType.Accelerometer, Value = new MotionVector() { X = e.Values[0], Y = e.Values[1], Z = e.Values[2] }, Timestamp = e.Timestamp });
 
                     break;
                 case SensorType.Gyroscope:
-                    SensorValueChanged(this, new SensorValueChangedEventArgs() { ValueType = MotionSensorValueType.Vector, SensorType = MotionSensorType.Gyroscope, Value = new MotionVector() { X = e.Values[0], Y = e.Values[1], Z = e.Values[2] } });
+                    SensorValueChanged(this, new SensorValueChangedEventArgs() { ValueType = MotionSensorValueType.Vector, SensorType = MotionSensorType.Gyroscope, Value = new MotionVector() { X = e.Values[0], Y = e.Values[1], Z = e.Values[2] }, Timestamp = e.Timestamp });
 
                     break;
                 case SensorType.MagneticField:
-                    SensorValueChanged(this, new SensorValueChangedEventArgs() { ValueType = MotionSensorValueType.Vector, SensorType = MotionSensorType.Magnetometer, Value = new MotionVector() { X = e.Values[0], Y = e.Values[1], Z = e.Values[2] } });
+                    SensorValueChanged(this, new SensorValueChangedEventArgs() { ValueType = MotionSensorValueType.Vector, SensorType = MotionSensorType.Magnetometer, Value = new MotionVector() { X = e.Values[0], Y = e.Values[1], Z = e.Values[2] }, Timestamp = e.Timestamp });
 
                     break;
                 case SensorType.Orientation:
-                    SensorValueChanged(this, new SensorValueChangedEventArgs() { ValueType = MotionSensorValueType.Single, SensorType = MotionSensorType.Compass, Value = new MotionValue() { Value = e.Values[0] } });
+                    SensorValueChanged(this, new SensorValueChangedEventArgs() { ValueType = MotionSensorValueType.Single, SensorType = MotionSensorType.Compass, Value = new MotionValue() { Value = e.Values[0] }, Timestamp = e.Timestamp });
                     break;
 
                 case SensorType.StepDetector:
-                    SensorValueChanged(this, new SensorValueChangedEventArgs { ValueType = MotionSensorValueType.Single, SensorType = MotionSensorType.StepDetector, Value = new MotionValue { Value = e.Values[0] } });
+                    SensorValueChanged(this, new SensorValueChangedEventArgs { ValueType = MotionSensorValueType.Single, SensorType = MotionSensorType.StepDetector, Value = new MotionValue { Value = e.Values[0] }, Timestamp = e.Timestamp });
                     break;
 
                 case SensorType.StepCounter:
-                    SensorValueChanged(this, new SensorValueChangedEventArgs { ValueType = MotionSensorValueType.Single, SensorType = MotionSensorType.StepCounter, Value = new MotionValue { Value = e.Values[0] } });
+                    SensorValueChanged(this, new SensorValueChangedEventArgs { ValueType = MotionSensorValueType.Single, SensorType = MotionSensorType.StepCounter, Value = new MotionValue { Value = e.Values[0] }, Timestamp = e.Timestamp });
                     break;
-
             }
-
-
-
         }
 
 
